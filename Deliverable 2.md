@@ -6,7 +6,7 @@
 - Reviewed column relationships and formulas (e.g., totals, ratios).
 - Goal: understand how variables relate and identify potential data issues.
 
-![Data overview](image/Deliverable 2.png)
+![Data overview](image/Deliverable%202.png)
 
 ---
 
