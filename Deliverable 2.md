@@ -5,7 +5,8 @@
 - Loaded the dataset and created a backup copy.
 - Reviewed column relationships and formulas (e.g., totals, ratios).
 - Goal: understand how variables relate and identify potential data issues.
-![[Deliverable 2.png]]
+![Data overview](images/Deliverable 2.png)
+
 ---
 
 ## **Step 1 — Data Cleaning**
