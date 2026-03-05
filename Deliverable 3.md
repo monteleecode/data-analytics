@@ -1,9 +1,9 @@
 ## Graphs
-![Deliverable 3](Deliverable%203.png)
+![Deliverable 3](image/Deliverable%203.png)
 
 ## Statistical Inference
 ### 1. State-Level Variance Analysis
-![STUTERATIO vs LSTATE](STUTERATIO_vs_LSTATE_boxplot.png)
+![STUTERATIO vs LSTATE](image/STUTERATIO_vs_LSTATE_boxplot.png)
 **Insight:** Certain states deviate significantly from the national student-teacher ratio average.
 
 **Explanation:** We performed a series of **one-sample t-tests** comparing each state's mean `STUTERATIO` against the population mean ($15.14$). By calculating **95% Confidence Intervals**, we identified which states are statistically higher or lower than the benchmark. This helps prioritize resources for states that are currently overburdened.
@@ -66,7 +66,7 @@ Population Average STUTERATIO: 15.14
 | **PR**    | LOWER 📉   | 10.10    | [9.93, 10.27]          | 2.16e-301   |
 
 ### 2. Special Education Schools
-![STUTERATIO vs SCHOOL TYPE](STUTERATIO_vs_SCHOOL_TYPE_TEXT_boxplot.png)
+![STUTERATIO vs SCHOOL TYPE](image/STUTERATIO_vs_SCHOOL_TYPE_TEXT_boxplot.png)
 **Insight:** Special Education schools maintain a significantly lower student-teacher ratio.
 
 **Explanation:** Using a **left-tailed t-test**, we confirmed that these specialized institutions operate with more staff per student to meet high-need requirements. The **p-value ($< 0.05$)** and a confidence interval strictly below the population mean provide statistical proof that this is a structural characteristic of the school type, not a sampling fluke.
@@ -84,7 +84,7 @@ Conclusion: Special education schools have a significantly lower STUTERATIO.
 The 95% CI [8.90, 9.72] is entirely below the population mean of 15.14.
 
 ### 3. Ungraded Schools
-![STUTERATIO vs SCHOOL LEVEL](STUTERATIO_vs_SCHOOL_LEVEL_boxplot%201.png)
+![STUTERATIO vs SCHOOL LEVEL](image/STUTERATIO_vs_SCHOOL_LEVEL_boxplot%201.png)
 **Insight:** Ungraded schools show lower `STUTERATIO` values than traditional K-12 models.
 
 **Explanation:** We validated this insight through **hypothesis testing**, proving that the non-traditional structure of ungraded schools correlates with smaller class sizes. This suggests that alternative education models may prioritize individual student attention differently than standard grade-level schools.
@@ -102,7 +102,7 @@ Conclusion: Ungraded schools have a significantly lower STUTERATIO.
 The confidence interval [1.51, 2.80] confirms the mean is strictly below 15.14.
 
 ### 4. Urban + Suburban (ULOCALE) vs Rural Impact
-![STUTERATIO vs ULOCALE](STUTERATIO_vs_ULOCALE_boxplot.png)
+![STUTERATIO vs ULOCALE](image/STUTERATIO_vs_ULOCALE_boxplot.png)
 **Insight:** Schools in Cities and Suburbs (ULOCALE 1 & 2) have higher student-teacher ratios than the average.
 
 **Explanation:** A **right-tailed t-test** was used to validate that high-density areas face greater classroom crowding. The results show that urban and suburban centers are statistically more likely to exceed the national average, highlighting a geographic disparity in educational staffing.
@@ -132,7 +132,7 @@ Conclusion: Rural schools have a significantly lower STUTERATIO.
 The 95% CI [13.89, 14.02] is entirely below the population mean of 15.14.
 
 ### 5. Asian Student Ratio Stability
-![STUTERATIO vs AS](STUTERATIO_vs_AS_scatter.png)
+![STUTERATIO vs AS](image/STUTERATIO_vs_AS_scatter.png)
 **Insight:** When the Asian student ratio exceeds 35%, the `STUTERATIO` becomes more stable.
 
 **Explanation:** Unlike the other checks, this used an **F-Test for Equality of Variances**. We proved that the **Variance ($\sigma^2$)** of this subgroup is significantly lower than the population variance ($31.73$ vs $33.65$). This indicates that these schools have a more "predictable" and consistent staffing model compared to the wider population.
@@ -154,7 +154,7 @@ Proof: The entire variance CI is below the population variance of 33.6500.
 We performed an F-test to determine if schools with an Asian student ratio > 35% exhibit more stable Student-Teacher Ratios than the general population. With a variance of 31.73 compared to the population's 33.65, the resulting p-value of 0.0379 allows us to reject the null hypothesis. We can conclude with 95% confidence that the high-AS group is significantly more stable, with its true variance likely falling between 29.81 and 33.84.
 
 ### 6. Majority White (WH) Schools (The only one **Failed**)
-![STUTERATIO vs WH](STUTERATIO_vs_WH_scatter.png)
+![STUTERATIO vs WH](image/STUTERATIO_vs_WH_scatter.png)
 **Insight:** Schools with a majority White population ($> 50\%$) correlate with lower student-teacher ratios.
 
 **Explanation:** With a massive sample size ($n=48,309$), a **two-tailed t-test** yielded a near-zero p-value ($2.92 \times 10^{-70}$), proving a highly significant downward shift in ratios. The extremely narrow **Confidence Interval ($14.67$ to $14.76$)** provides a precise range that is strictly below the national average of $15.14$.
